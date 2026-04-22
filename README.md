@@ -1,59 +1,120 @@
-# Qu'est-ce que c'est ?
+# 📊 Analyse des ventes d'une PME
 
-Ceci est un projet de visualisation de données, qui utilise le langage de programmation Python.
-Il utilise deux outils : [pandas](https://pandas.pydata.org/about/) et [plotly](https://plotly.com/python/).
+Projet de visualisation de données réalisé dans le cadre de la préparation à la journée de sélection pour le parcours **Développeur en Intelligence Artificielle** — [Simplon.co](https://simplon.co).
 
-- Pandas va nous permettre de télécharger un fichier de données CSV depuis une URL.
-- Plotly va nous permettre de générer des graphiques puis de les exporter en page web (au format HTML).
+---
 
-# Démarrer le projet dans GitHub Codespaces
-* Cliquez sur "Utiliser ce modèle" ("Use this template") en haut à droite de la page, puis sur "Créer un nouveau dépôt". [Voici les étapes pour créer un dépôt](https://docs.github.com/fr/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template#creating-a-repository-from-a-template). Si vous n'avez pas de compte GitHub, il vous sera demandé d'en créer un avant de pouvoir créer le dépôt.
-* Une fois dans votre dépôt, ouvrez le site dans un Codespace en cliquant sur Code > Codespaces, puis créez un nouveau Codespace sur votre branche principale.
+## 🎯 Objectifs
 
-<img alt="Créer un Codespace" src="https://github.com/user-attachments/assets/cb29a8da-d1ac-42f5-962c-7d43b8011324" width="400px"/><br/>
+- Explorer un jeu de données et en comprendre les caractéristiques principales
+- Requêter les données avec **SQL** (chiffre d'affaires, ventes par produit, ventes par région)
+- Visualiser les résultats sous forme de graphiques interactifs avec **Python**
 
-## Attendez que l’environnement de travail sur Codespace soit prêt
+---
 
-L'environnement de travail Codespace va se construire automatiquement au premier lancement. Cela peut prendre plusieurs minutes.
+## 🛠️ Technologies utilisées
 
-L’environnement est prêt lorsque vous voyez apparaître en bas de la page les boutons suivants :
+| Outil | Rôle |
+|---|---|
+| [pandas](https://pandas.pydata.org/about/) | Chargement et traitement des données CSV |
+| [Plotly Express](https://plotly.com/python/plotly-express/) | Génération de graphiques interactifs exportés en HTML |
+| Python 3 | Langage principal |
+| GitHub Codespaces | Environnement de développement en ligne |
 
-    💬 MESSAGE DE BIENVENUE
+---
 
-    💻 TERMINAL
+## 🚀 Démarrer le projet
 
-    🔎 SPLIT
+### 1. Créer votre propre dépôt depuis ce modèle
 
-    🏠 PREVIEW
+Cliquez sur **"Use this template"** → **"Create a new repository"** en haut à droite de la page.  
+[📖 Guide : créer un dépôt depuis un template](https://docs.github.com/fr/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template#creating-a-repository-from-a-template)
 
-➡️ Ne touchez à rien pendant le chargement.
+> Si vous n'avez pas encore de compte GitHub, il vous sera demandé d'en créer un.
 
-# Le projet
-## Comment ça marche ?
+### 2. Ouvrir dans GitHub Codespaces
 
-* `README.md`: Il s'agit de ce fichier, que vous lisez en ce moment même.
+Dans votre nouveau dépôt, cliquez sur **Code > Codespaces**, puis créez un nouveau Codespace sur votre branche principale.
 
-* `app.py`: ceci est un fichier python, le coeur du projet.
+<img alt="Créer un Codespace" src="https://github.com/user-attachments/assets/cb29a8da-d1ac-42f5-962c-7d43b8011324" width="400px"/>
 
-Pour executer le fichier Python et ainsi générer un graphique sous forme de page web, cliquez sur le bouton "💻 TERMINAL" depuis la barre d'outils en bas de page.
+> ⏳ L'environnement se construit automatiquement au premier lancement. Patientez quelques minutes sans intervenir.
 
-Puis écrivez la commande suivante : `python3 app.py`.
+L'environnement est prêt lorsque la barre d'outils en bas affiche :
 
-Cette commande se divise en deux partie : 
-- d'abord "python3" qui indique que l'on souhaite utiliser Python, et plus précisemment, la version 3.
-- Puis "app.py" qui indique que l'on souhaite exécuter le programme python contenu dans le fichier "app.py" (avec Python3 donc).
+```
+💬 MESSAGE DE BIENVENUE   💻 TERMINAL   🔎 SPLIT   🏠 PREVIEW
+```
 
-Appuyez sur la touche `Entrée` de votre clavier, après quelques secondes d'exécution, vous devriez obtenir un message de succès.
+---
 
-## Observer son résultat
+## 📁 Structure du projet
 
-Cliquez sur le bouton "🏠 PREVIEW" depuis la barre d'outils en bas de page.
-Depuis la nouvelle fenêtre de votre navigateur qui vient de s'ouvrir, sélectionner le fichier "ventes-par-region.html".
+```
+.
+├── app.py           # Script principal — génère les graphiques
+├── README.md        # Ce fichier
+├── ventes-par-region.html     # Graphique généré : répartition des ventes par région
+├── ventes-par-produit.html    # Graphique généré : quantités vendues par produit
+└── ca-par-produit.html        # Graphique généré : chiffre d'affaires par produit
+```
 
-Vous venez d'ouvrir le graphique en version web généré par le fichier "app.py" exécuté avec Python3 !
+---
 
-Prenez le temps de lire, d'analyser voir même de bidouiller le fichier "app.py" puis lancez-vous dans les consignes du projet pour la sélection Simplon !
+## ▶️ Exécuter le projet
 
-# Publier vos modifications sur votre propre dépôt GitHub
-Une fois que vous avez terminé de travailler sur les consignes du projet et que vous souhaitez publier vos modifications dans votre dépôt, vous devrez suivre les étapes décrites dans la section « Validation (commit) de vos modifications » de [cette ressource](https://docs.github.com/fr/codespaces/developing-in-a-codespace/using-source-control-in-your-codespace#validation-commit-de-vos-modifications
-).
+1. Cliquez sur le bouton **💻 TERMINAL** dans la barre d'outils en bas de page.
+2. Saisissez la commande suivante et appuyez sur `Entrée` :
+
+```bash
+python3 app.py
+```
+
+Après quelques secondes, trois messages de succès apparaissent :
+
+```
+ventes-par-region.html généré avec succès !
+ventes-par-produit.html généré avec succès !
+ca-par-produit.html généré avec succès !
+```
+
+---
+
+## 🔍 Visualiser les graphiques
+
+Cliquez sur le bouton **🏠 PREVIEW** dans la barre d'outils, puis sélectionnez l'un des fichiers HTML générés :
+
+- `ventes-par-region.html` — Camembert de la répartition des ventes par région
+- `ventes-par-produit.html` — Barres horizontales des quantités vendues par produit
+- `ca-par-produit.html` — Barres horizontales du chiffre d'affaires par produit
+
+---
+
+## 📈 Graphiques produits
+
+### Quantité vendue par région
+Diagramme circulaire (pie chart) représentant la part des ventes (`qte`) de chaque région.
+
+### Quantité vendue par produit
+Diagramme en barres horizontales représentant le total des quantités vendues, regroupées par produit.
+
+### Chiffre d'affaires par produit
+Diagramme en barres horizontales représentant le chiffre d'affaires (`prix × qte`) cumulé par produit, affiché en euros.
+
+---
+
+## 💾 Publier vos modifications
+
+Une fois vos graphiques créés et validés, publiez vos modifications dans votre dépôt en suivant la section **"Validation (commit) de vos modifications"** de [ce guide GitHub](https://docs.github.com/fr/codespaces/developing-in-a-codespace/using-source-control-in-your-codespace#validation-commit-de-vos-modifications).
+
+---
+
+## 📄 Livrables attendus
+
+- ✅ Export SQL des requêtes (`file > save SQL` depuis sqliteonline.com)
+- ✅ Fiche synthèse des résultats (CA total, ventes par produit, ventes par région)
+- ✅ Lien vers ce dépôt GitHub complété
+
+---
+
+*Projet réalisé dans le cadre du processus de sélection Simplon — parcours Développeur en Intelligence Artificielle.*
